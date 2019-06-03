@@ -18,6 +18,12 @@ print "Querying database for authority IDs"
 # read the mode from the config file to work out what will be downloaded
 if (config.get_fhrs_mode == 'small_test'):
     fhrs_authorities = [371, 373]
+elif (config.get_fhrs_mode == 'norwich'):
+    fhrs_authorities = [33]
+elif (config.get_fhrs_mode == 'breckland'):
+    fhrs_authorities = [28]
+elif (config.get_fhrs_mode == 'norfolk'):
+    fhrs_authorities = [28, 29, 30, 31, 32, 33, 34]
 elif (config.get_fhrs_mode == 'west_mids'):
     fhrs_authorities = fhrs.get_authorities(connection=con, region_name='West Midlands')
 elif (config.get_fhrs_mode == 'full'):
